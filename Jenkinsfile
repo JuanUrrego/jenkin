@@ -22,7 +22,7 @@ pipeline{
             steps {
                 script {
                     withCredentials([
-                            string(credentialsId: 'MONGO:URI', variable: 'MONGO_URI' )
+                            string(credentialsId: 'MONGO_URI', variable: 'MONGO_URI' )
                         ]) {  
                             sh """
                                 sed 's|\\${MONGO_URI}|${MONGO_URI}|g' docker-compose.yml > docker-compose-update.yml
