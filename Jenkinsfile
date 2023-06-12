@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Clonar el repositorio'){
             steps{
-                git branch: 'main', credentialsId: 'git-jenkins', url: 'https://github.com/shenao96/parte1vscmicrojenkings.git'
+                git branch: 'main', credentialsId: 'git-jenkins', url: 'https://github.com/JuanUrrego/jenkin.git'
             }
         }
         stage('Contruir imagen Docker'){
